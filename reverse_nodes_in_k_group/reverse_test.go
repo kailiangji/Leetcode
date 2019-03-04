@@ -10,23 +10,14 @@ import (
 func Test_reverseKGroup(t *testing.T) {
 	var head *ListNode
 
-	for i := 5; i > 0; i-- {
+	for i := 2; i > 0; i-- {
 		head = &ListNode{Val: i, Next: head}
 	}
 
-	head = reverseKGroup(head, 1)
-	fmt.Println(head.Val)
-	assert.Equal(t, 1, head.Val)
-	head = head.Next
-	fmt.Println(head.Val)
-	assert.Equal(t, 2, head.Val)
-	head = head.Next
-	fmt.Println(head.Val)
-	assert.Equal(t, 3, head.Val)
-	head = head.Next
-	fmt.Println(head.Val)
-	assert.Equal(t, 4, head.Val)
-	head = head.Next
-	fmt.Println(head.Val)
-	assert.Equal(t, 5, head.Val)
+	head2 := reverseKGroup(head, 3)
+	fmt.Println(head2.Val)
+	assert.Equal(t, 1, head2.Val)
+	head2 = head2.Next
+	fmt.Println(head2.Val)
+	assert.Equal(t, 2, head2.Val)
 }
